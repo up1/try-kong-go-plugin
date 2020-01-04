@@ -1,0 +1,3 @@
+# Workaround problemn :: permission denie
+docker exec -it kong_nodb bash
+chmod -R 777 /usr/local/kong/

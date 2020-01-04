@@ -1,0 +1,6 @@
+github.com/Kong/go-pdk v0.0.0-20191211222512-52ccc05bbc84 h1:b1+6VjR30ZxHJowR3LUIeezDnHj1tuVSWRSyrdP4Bys=
+github.com/Kong/go-pdk v0.0.0-20191211222512-52ccc05bbc84/go.mod h1:tZ+xtYZmNTgU0CLLeBzMg2PVky1aIID2GDbcHiim1cU=
+github.com/ugorji/go v1.1.7 h1:/68gy2h+1mWMrwZFeD1kQialdSzAb432dtpeJ42ovdo=
+github.com/ugorji/go v1.1.7/go.mod h1:kZn38zHttfInRq0xu/PH0az30d+z6vm202qpg1oXVMw=
+github.com/ugorji/go/codec v1.1.7 h1:2SvQaVZ1ouYrrKKwoSk2pzd4A9evlKJb9oTL+OaLUSs=
+github.com/ugorji/go/codec v1.1.7/go.mod h1:Ax+UKWsSmolVDwsd+7N3ZtXu+yMGCf907BLYF3GoBXY=

@@ -1,0 +1,16 @@
+_format_version: '1.1'
+services:
+- name: my-service
+  url: http://www.somkiat.cc
+  routes:
+  - name: web1
+    hosts:
+      - localhost
+  plugins:
+    - name: go-hello
+plugins:
+  - name: go-hello
+    service: my-service
+  - name: bundled
+    service: my-service
+   

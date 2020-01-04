@@ -1,0 +1,35 @@
+version: '3.5'
+networks:
+    kong-net:
+        driver: bridge
+services:
+    kong:
+        build: 
+            context: ./go-plugins
+        container_name: kong_nodb
+        networks:
+        - kong-net
+        environment:
+            KONG_DECLARATIVE_CONFIG: /kong.conf.d/kong.yml
+            KONG_ADMIN_LISTEN: 0.0.0.0:8001
+            LD_LIBRARY_PATH: /kong.conf.d
+            KONG_DATABASE: "off"
+            KONG_STORAGE: memory
+            KONG_GO_PLUGINS_DIR: /kong.conf.d
+            KONG_PLUGINS: bundled,go-hello
+        healthcheck:
+            test: ["CMD", "curl", "-f", "http://kong_nodb:8000"]
+            interval: 5s
+            timeout: 2s
+            retries: 15
+        ports:
+        - "8000:8000/tcp"
+        - "8001:8001/tcp"
+        - "8443:8443/tcp"
+        - "8444:8444/tcp"
+ 
+    web1:
+        image: nginxdemos/hello:latest
+        container_name: web1
+        ports:
+        - "9091:80"
